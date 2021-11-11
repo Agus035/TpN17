@@ -102,7 +102,33 @@ form {
 h3 {
   text-align: center;
 }
+span {
+  background-color: rgb(255, 255, 231);
+  font-size: 20px !important;
+}
+.conclusion {
+  font-size: 20px !important;
+  display: flex;
+  align-items: start;
 
+  padding: 5px;
+  width: 100%;
+  max-width: 800px;
+  flex-direction: column;
+}
+
+.conclusion h3 {
+  font-size: 20px;
+}
+
+.resultado {
+  display: none;
+  place-content: center;
+  place-items: center;
+  width: 100%;
+  position: relative;
+  flex-direction: column;
+}
 .resultado {
   display: none;
 }
@@ -149,31 +175,4 @@ h3 {
 
   background-color: transparent;
   margin-bottom: 8px;
-}
-span {
-  background-color: rgb(255, 255, 231);
-  font-size: 20px !important;
-}
-.conclusion {
-  font-size: 20px !important;
-  display: flex;
-  align-items: start;
-
-  padding: 5px;
-  width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-}
-
-.conclusion h3 {
-  font-size: 20px;
-}
-
-.resultado {
-  display: none;
-  place-content: center;
-  place-items: center;
-  width: 100%;
-  position: relative;
-  flex-direction: column;
 }
