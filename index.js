@@ -4,6 +4,7 @@ app.use(express.static(__dirname + "/public"));
 app.get("/resultado", (req, res) => {
   res.send();
 });
+app.set("port", process.env.PORT || 8888);
 app.get("/", (req, res) => {
   let numAr = GenerarNumerosAleatorios();
   let numArContainer = "";
@@ -96,10 +97,9 @@ app.get("/", (req, res) => {
 </html>`);
 });
 
-app.listen(8888, () => {
-  console.log("Servidor iniciado en el puerto 8888");
+app.listen(app.get("port"), () => {
+  console.log(`Servidor iniciado en el${app.get("port")}`);
 });
-
 function GenerarNumerosAleatorios() {
   var arrayNumerosAleatorios = [];
   var n = 2;
