@@ -18,18 +18,17 @@ var container13 = document.querySelectorAll(".good");
 
 // Funciones
 
-function SN() {
+function SN() { //separar nums
   let TN = [];
   container12 = container12.split("/"); //Separa la hidden imput cuando encuentra una /
   container12.pop();
   for (let i = 0; i <= container12.length - 1; i++) {
     TN.push(container12[i].split(","));
   }
-  // console.log(numsTotales);
   return TN;
 }
 
-function MN() {
+function MN() { //mostrar numeros
   let i = -1;
   if (x == 8) {
     container6.style.display = "flex";
@@ -59,7 +58,7 @@ function MN() {
     }
   }
 }
-function CR() {
+function CR() { //Comprobar respuesta
   let n2 = container12[x].toString();
   n2 = n2.replaceAll(",", " ") + " ";
   if (n2 == container9.innerHTML) {
@@ -69,7 +68,7 @@ function CR() {
     } else {
       container13[x + 1].setAttribute("acertado", "true");
     }
-    MN();
+    MN(); // llama a la funcion mostrar nums
   } else {
     RC();
     container6.style.display = "flex";
@@ -90,7 +89,7 @@ function E() {
   });
 }
 
-function RC() {
+function RC() { //respuesta correcta
   container13.forEach((e) => {
     if (e.getAttribute("acertado") == "true") {
       e.innerHTML = "acertado";
